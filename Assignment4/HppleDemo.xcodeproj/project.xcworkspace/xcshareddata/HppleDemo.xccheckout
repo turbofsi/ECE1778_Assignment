@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>464F5556-704A-4EAB-BF47-2781594F0B73</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HppleDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6653D15B70E164FEF1A364439C351AB06F9B8781</key>
+		<string>https://github.com/turbofsi/ECE1778_Assignment.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Assignment4/HppleDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6653D15B70E164FEF1A364439C351AB06F9B8781</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/turbofsi/ECE1778_Assignment.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6653D15B70E164FEF1A364439C351AB06F9B8781</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6653D15B70E164FEF1A364439C351AB06F9B8781</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ECE1778_Assignment</string>
+		</dict>
+	</array>
+</dict>
+</plist>
