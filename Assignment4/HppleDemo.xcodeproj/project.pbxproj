@@ -10,6 +10,8 @@
 		7C2DCBF41A6C638600E9FA3F /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBEF1A6C638600E9FA3F /* TFHpple.m */; };
 		7C2DCBF51A6C638600E9FA3F /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBF11A6C638600E9FA3F /* TFHppleElement.m */; };
 		7C2DCBF61A6C638600E9FA3F /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBF31A6C638600E9FA3F /* XPathQuery.m */; };
+		7C2DCBF91A6C649400E9FA3F /* userDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBF81A6C649400E9FA3F /* userDB.m */; };
+		7C2DCBFB1A6C745800E9FA3F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2DCBFA1A6C745800E9FA3F /* libsqlite3.0.dylib */; };
 		AD210CE81A249B34007EB02E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CE71A249B34007EB02E /* main.m */; };
 		AD210CEB1A249B34007EB02E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CEA1A249B34007EB02E /* AppDelegate.m */; };
 		AD210CEE1A249B34007EB02E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CED1A249B34007EB02E /* ViewController.m */; };
@@ -41,6 +43,9 @@
 		7C2DCBF11A6C638600E9FA3F /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		7C2DCBF21A6C638600E9FA3F /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		7C2DCBF31A6C638600E9FA3F /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		7C2DCBF71A6C649400E9FA3F /* userDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userDB.h; sourceTree = "<group>"; };
+		7C2DCBF81A6C649400E9FA3F /* userDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userDB.m; sourceTree = "<group>"; };
+		7C2DCBFA1A6C745800E9FA3F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AD210CE21A249B34007EB02E /* HppleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HppleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD210CE61A249B34007EB02E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD210CE71A249B34007EB02E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C2DCBFB1A6C745800E9FA3F /* libsqlite3.0.dylib in Frameworks */,
 				AD210D161A249C4A007EB02E /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +126,8 @@
 				AD210CEA1A249B34007EB02E /* AppDelegate.m */,
 				AD210CEC1A249B34007EB02E /* ViewController.h */,
 				AD210CED1A249B34007EB02E /* ViewController.m */,
+				7C2DCBF71A6C649400E9FA3F /* userDB.h */,
+				7C2DCBF81A6C649400E9FA3F /* userDB.m */,
 				AD210CEF1A249B34007EB02E /* Main.storyboard */,
 				AD210CF21A249B34007EB02E /* Images.xcassets */,
 				AD210CF41A249B34007EB02E /* LaunchScreen.xib */,
@@ -160,6 +168,7 @@
 		AD210D171A249C7A007EB02E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C2DCBFA1A6C745800E9FA3F /* libsqlite3.0.dylib */,
 				AD210D151A249C4A007EB02E /* libxml2.dylib */,
 			);
 			name = Frameworks;
@@ -276,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD210CEE1A249B34007EB02E /* ViewController.m in Sources */,
+				7C2DCBF91A6C649400E9FA3F /* userDB.m in Sources */,
 				AD210CEB1A249B34007EB02E /* AppDelegate.m in Sources */,
 				AD210CE81A249B34007EB02E /* main.m in Sources */,
 				7C2DCBF41A6C638600E9FA3F /* TFHpple.m in Sources */,

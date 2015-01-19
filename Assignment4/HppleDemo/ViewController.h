@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TFHpple.h"
+#import "userDB.h"
 
 @interface ViewController : UIViewController<UIAlertViewDelegate>
 

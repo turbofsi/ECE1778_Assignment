@@ -93,6 +93,14 @@
     
     [self performSelectorOnMainThread:@selector(finishAction:) withObject:nameArray waitUntilDone:YES];
     
+    userDB *myDataBase = [[userDB alloc] init];
+    [myDataBase creatDataBase];
+    
+    for (int i = 0; i < [nameArray count]; i++) {
+        NSString *tempName = nameArray[i];
+        [myDataBase inserToDataBase:tempName];
+    }
+    
     
 
 }
