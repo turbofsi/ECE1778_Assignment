@@ -20,6 +20,9 @@
 		7C430AAB1A60B40200D47F64 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C430AAA1A60B40200D47F64 /* ImageIO.framework */; };
 		7C430AAD1A60B40D00D47F64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C430AAC1A60B40D00D47F64 /* QuartzCore.framework */; };
 		7C430AAF1A60DDE200D47F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C430AAE1A60DDE200D47F64 /* CoreLocation.framework */; };
+		7C9486311A7356E100CD3A3F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9486301A7356E100CD3A3F /* DetailViewController.m */; };
+		7CCE02C71A754F20000169B1 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCE02C61A754F20000169B1 /* dog.png */; };
+		7CCE02CA1A7582B5000169B1 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE02C91A7582B5000169B1 /* UIImage+fixOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,11 @@
 		7C430AAA1A60B40200D47F64 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		7C430AAC1A60B40D00D47F64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7C430AAE1A60DDE200D47F64 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7C94862F1A7356E100CD3A3F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7C9486301A7356E100CD3A3F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7CCE02C61A754F20000169B1 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		7CCE02C81A7582B5000169B1 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
+		7CCE02C91A7582B5000169B1 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +117,15 @@
 				7C430A831A609D8200D47F64 /* AppDelegate.m */,
 				7C430A851A609D8200D47F64 /* ViewController.h */,
 				7C430A861A609D8200D47F64 /* ViewController.m */,
+				7C94862F1A7356E100CD3A3F /* DetailViewController.h */,
+				7C9486301A7356E100CD3A3F /* DetailViewController.m */,
 				7C430A881A609D8200D47F64 /* Main.storyboard */,
 				7C430A8B1A609D8200D47F64 /* Images.xcassets */,
+				7CCE02C61A754F20000169B1 /* dog.png */,
 				7C430A8D1A609D8200D47F64 /* LaunchScreen.xib */,
 				7C430A7E1A609D8200D47F64 /* Supporting Files */,
+				7CCE02C81A7582B5000169B1 /* UIImage+fixOrientation.h */,
+				7CCE02C91A7582B5000169B1 /* UIImage+fixOrientation.m */,
 			);
 			path = ActionCameraDemo;
 			sourceTree = "<group>";
@@ -223,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCE02C71A754F20000169B1 /* dog.png in Resources */,
 				7C430A8A1A609D8200D47F64 /* Main.storyboard in Resources */,
 				7C430A8F1A609D8200D47F64 /* LaunchScreen.xib in Resources */,
 				7C430A8C1A609D8200D47F64 /* Images.xcassets in Resources */,
@@ -243,9 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCE02CA1A7582B5000169B1 /* UIImage+fixOrientation.m in Sources */,
 				7C430A871A609D8200D47F64 /* ViewController.m in Sources */,
 				7C430A841A609D8200D47F64 /* AppDelegate.m in Sources */,
 				7C430A811A609D8200D47F64 /* main.m in Sources */,
+				7C9486311A7356E100CD3A3F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionCameraDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -379,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionCameraDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

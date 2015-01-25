@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ECEB3286-F574-4994-B07F-569353392C3B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>A1demo1222</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6653D15B70E164FEF1A364439C351AB06F9B8781</key>
+		<string>https://github.com/turbofsi/ECE1778_Assignment.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>A1demo1222/A1demo1222.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6653D15B70E164FEF1A364439C351AB06F9B8781</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/turbofsi/ECE1778_Assignment.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6653D15B70E164FEF1A364439C351AB06F9B8781</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6653D15B70E164FEF1A364439C351AB06F9B8781</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ECE1778_Assignment</string>
+		</dict>
+	</array>
+</dict>
+</plist>

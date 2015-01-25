@@ -10,12 +10,13 @@
 		7C2DCBF41A6C638600E9FA3F /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBEF1A6C638600E9FA3F /* TFHpple.m */; };
 		7C2DCBF51A6C638600E9FA3F /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBF11A6C638600E9FA3F /* TFHppleElement.m */; };
 		7C2DCBF61A6C638600E9FA3F /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBF31A6C638600E9FA3F /* XPathQuery.m */; };
-		7C2DCBF91A6C649400E9FA3F /* userDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DCBF81A6C649400E9FA3F /* userDB.m */; };
 		7C2DCBFB1A6C745800E9FA3F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2DCBFA1A6C745800E9FA3F /* libsqlite3.0.dylib */; };
+		7C6012581A6CCBAD005B5789 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6012521A6CCBAD005B5789 /* MainViewController.m */; };
+		7C6012591A6CCBAD005B5789 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6012541A6CCBAD005B5789 /* DetailViewController.m */; };
+		7C60125A1A6CCBAD005B5789 /* userDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6012561A6CCBAD005B5789 /* userDB.m */; };
+		7C60125B1A6CCBAD005B5789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6012571A6CCBAD005B5789 /* Main.storyboard */; };
 		AD210CE81A249B34007EB02E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CE71A249B34007EB02E /* main.m */; };
 		AD210CEB1A249B34007EB02E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CEA1A249B34007EB02E /* AppDelegate.m */; };
-		AD210CEE1A249B34007EB02E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CED1A249B34007EB02E /* ViewController.m */; };
-		AD210CF11A249B34007EB02E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD210CEF1A249B34007EB02E /* Main.storyboard */; };
 		AD210CF31A249B34007EB02E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD210CF21A249B34007EB02E /* Images.xcassets */; };
 		AD210CF61A249B34007EB02E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD210CF41A249B34007EB02E /* LaunchScreen.xib */; };
 		AD210D161A249C4A007EB02E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD210D151A249C4A007EB02E /* libxml2.dylib */; };
@@ -43,17 +44,19 @@
 		7C2DCBF11A6C638600E9FA3F /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		7C2DCBF21A6C638600E9FA3F /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		7C2DCBF31A6C638600E9FA3F /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		7C2DCBF71A6C649400E9FA3F /* userDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userDB.h; sourceTree = "<group>"; };
-		7C2DCBF81A6C649400E9FA3F /* userDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userDB.m; sourceTree = "<group>"; };
 		7C2DCBFA1A6C745800E9FA3F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		7C6012511A6CCBAD005B5789 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7C6012521A6CCBAD005B5789 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7C6012531A6CCBAD005B5789 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7C6012541A6CCBAD005B5789 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7C6012551A6CCBAD005B5789 /* userDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userDB.h; sourceTree = "<group>"; };
+		7C6012561A6CCBAD005B5789 /* userDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userDB.m; sourceTree = "<group>"; };
+		7C6012571A6CCBAD005B5789 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AD210CE21A249B34007EB02E /* HppleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HppleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD210CE61A249B34007EB02E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD210CE71A249B34007EB02E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD210CE91A249B34007EB02E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD210CEA1A249B34007EB02E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD210CEC1A249B34007EB02E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AD210CED1A249B34007EB02E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AD210CF01A249B34007EB02E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD210CF21A249B34007EB02E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD210CF51A249B34007EB02E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AD210CFB1A249B34007EB02E /* HppleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HppleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,11 +127,13 @@
 				7C2DCBED1A6C635400E9FA3F /* HTFile */,
 				AD210CE91A249B34007EB02E /* AppDelegate.h */,
 				AD210CEA1A249B34007EB02E /* AppDelegate.m */,
-				AD210CEC1A249B34007EB02E /* ViewController.h */,
-				AD210CED1A249B34007EB02E /* ViewController.m */,
-				7C2DCBF71A6C649400E9FA3F /* userDB.h */,
-				7C2DCBF81A6C649400E9FA3F /* userDB.m */,
-				AD210CEF1A249B34007EB02E /* Main.storyboard */,
+				7C6012511A6CCBAD005B5789 /* MainViewController.h */,
+				7C6012521A6CCBAD005B5789 /* MainViewController.m */,
+				7C6012531A6CCBAD005B5789 /* DetailViewController.h */,
+				7C6012541A6CCBAD005B5789 /* DetailViewController.m */,
+				7C6012551A6CCBAD005B5789 /* userDB.h */,
+				7C6012561A6CCBAD005B5789 /* userDB.m */,
+				7C6012571A6CCBAD005B5789 /* Main.storyboard */,
 				AD210CF21A249B34007EB02E /* Images.xcassets */,
 				AD210CF41A249B34007EB02E /* LaunchScreen.xib */,
 				AD210CE51A249B34007EB02E /* Supporting Files */,
@@ -262,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD210CF11A249B34007EB02E /* Main.storyboard in Resources */,
+				7C60125B1A6CCBAD005B5789 /* Main.storyboard in Resources */,
 				AD210CF61A249B34007EB02E /* LaunchScreen.xib in Resources */,
 				AD210CF31A249B34007EB02E /* Images.xcassets in Resources */,
 			);
@@ -284,13 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD210CEE1A249B34007EB02E /* ViewController.m in Sources */,
-				7C2DCBF91A6C649400E9FA3F /* userDB.m in Sources */,
+				7C60125A1A6CCBAD005B5789 /* userDB.m in Sources */,
 				AD210CEB1A249B34007EB02E /* AppDelegate.m in Sources */,
+				7C6012581A6CCBAD005B5789 /* MainViewController.m in Sources */,
 				AD210CE81A249B34007EB02E /* main.m in Sources */,
 				7C2DCBF41A6C638600E9FA3F /* TFHpple.m in Sources */,
 				7C2DCBF61A6C638600E9FA3F /* XPathQuery.m in Sources */,
 				7C2DCBF51A6C638600E9FA3F /* TFHppleElement.m in Sources */,
+				7C6012591A6CCBAD005B5789 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +321,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD210CEF1A249B34007EB02E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD210CF01A249B34007EB02E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD210CF41A249B34007EB02E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

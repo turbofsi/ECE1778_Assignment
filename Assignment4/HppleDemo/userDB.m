@@ -61,5 +61,40 @@
     
 }
 
+- (NSMutableArray *)loadArrayFromDataBase{
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    sqlite3 *sqlite = nil;
+    sqlite3_stmt *stmt = nil;
+    
+    NSString *filePath = [NSHomeDirectory() stringByAppendingString:@"/Documents/data.sqlite"];
+    
+    int result = sqlite3_open([filePath UTF8String], &sqlite);
+    
+    if (result != SQLITE_OK) {
+        NSLog(@"Fail to init db");
+        return nil;
+    }
+    
+    NSString *sql = @"SELECT username FROM User";
+    
+    sqlite3_prepare_v2(sqlite, [sql UTF8String], -1, &stmt, NULL);
+    
+    result = sqlite3_step(stmt);
+    while (result == SQLITE_ROW) {
+        char *username = (char *)sqlite3_column_text(stmt, 0);
+        NSString *userNameStr = [NSString stringWithCString:username encoding:NSUTF8StringEncoding];
+        [array addObject:userNameStr];
+        result = sqlite3_step(stmt);
+    }
+    
+    sqlite3_finalize(stmt);
+    sqlite3_close(sqlite);
+    
+    
+    return array;
+}
+
+
 
 @end

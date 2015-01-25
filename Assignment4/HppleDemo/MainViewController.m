@@ -1,52 +1,50 @@
 //
-//  ViewController.m
-//  HppleDemo
+//  MainViewController.m
+//  A4Demo
 //
-//  Created by Vytautas Galaunia on 11/25/14.
-//
+//  Created by  吕欣韵 on 2015-01-18.
+//  Copyright (c) 2015 UofT. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
+#import "DetailViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _processIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    _processIndicator.hidden = YES;
+    _processIndicator.center = self.view.center;
+    [self.view addSubview:_processIndicator];
+    
     
 }
-
-//- (NSData *) toUTF8:(NSData *)sourceData{
-//    CFStringRef gbkStr = CFStringCreateWithBytes(NULL, [sourceData bytes], [sourceData length], kCFStringEncodingGB_18030_2000, false);
-//    
-//    if (gbkStr == nil) {
-//        return nil;
-//    }
-//    
-//    else{
-//        NSString *gbkString = (__bridge NSString *)gbkStr;
-////
-//
-//    }
-//    
-//    
-//    
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (IBAction)loadAction:(UIButton *)sender {
+    _processIndicator.hidden = NO;
+    [_processIndicator startAnimating];
     [self performSelectorInBackground:@selector(loadToDataBase) withObject:nil];
+}
+
+- (IBAction)searchAction:(UIButton *)sender {
+//    [self performSelectorInBackground:@selector(prepareForSegue:sender:) withObject:nil];
 }
 
 #pragma mark - multithread
 - (void)loadToDataBase {
+    
     NSString *urlString = @"http://www.eecg.utoronto.ca/~jayar/PeopleList";
     NSData *htmlData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:urlString]];
     
@@ -72,12 +70,12 @@
     for (int i = 0; i < [tag length]; i++) {
         int index = [tag characterAtIndex:i];
         if (index == 10) {
-//            NSLog(@"enter position: %d", i);
+            //            NSLog(@"enter position: %d", i);
             [positionArray addObject:[NSString stringWithFormat:@"%d", i]];
         }
     }
     
-//    NSLog(@"%@", positionArray);
+    //    NSLog(@"%@", positionArray);
     
     for (int j=0; j < [positionArray count] - 2; j++) {
         int s1 = [positionArray[j] intValue];
@@ -102,19 +100,52 @@
     }
     
     
-
+    
 }
 
 
 - (void)finishAction:(NSMutableArray *)array {
     _loadArray = array;
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Mission complete" message:@"completed" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Confirm", nil];
+    [_processIndicator stopAnimating];
+    _processIndicator.hidden = YES;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Mission complete" message:@"completed" delegate:self cancelButtonTitle:@"Confirm" otherButtonTitles: nil];
     [alert show];
     NSLog(@"%@", _loadArray);
+    _searchBtn.enabled = YES;
 }
 
+//- (void)loadFromDataBase {
+//    
+//}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    
+    
+    
+    
+    
+    if ([[segue identifier] isEqualToString:@"MainToDetail"]) {
+        
+        
+        dispatch_queue_t queue = dispatch_queue_create("loadData", NULL);
+        dispatch_async(queue, ^{
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            userDB *dataBase = [[userDB alloc] init];
+            array = [dataBase loadArrayFromDataBase];
+            
 
+            DetailViewController *detailVC = [segue destinationViewController];
+            detailVC.showArray = [[NSMutableArray alloc] initWithArray:array];
 
+            
+        });
+
+        
+        
+       
+        
+    }
+}
 
 @end

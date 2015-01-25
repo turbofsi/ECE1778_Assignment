@@ -20,7 +20,8 @@
 @property(nonatomic, retain) AVCaptureStillImageOutput *stillImageOutput;
 @property (retain, nonatomic) IBOutlet UIImageView *vImage;
 @property (strong, nonatomic) CLLocationManager *locationManager;
-
+@property (strong, nonatomic) NSMutableArray *nameArray;
+@property (strong, nonatomic) NSMutableArray *localArray;
 
 @end
 

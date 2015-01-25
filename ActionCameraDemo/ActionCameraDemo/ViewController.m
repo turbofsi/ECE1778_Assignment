@@ -12,7 +12,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *latLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lonLabel;
-
+@property BOOL isShacken;
 @end
 
 @implementation ViewController
@@ -66,6 +66,20 @@
         [self.locationManager requestWhenInUseAuthorization];
     }
     
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"myData.plist"];
+    NSString *localPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"localData.plist"];
+    
+    NSArray *nameTemp = [[NSArray alloc] initWithContentsOfFile:filePath];
+    NSArray *localTemp = [[NSArray alloc] initWithContentsOfFile:localPath];
+    
+    _nameArray = [[NSMutableArray alloc] init];
+    _localArray = [[NSMutableArray alloc] init];
+    
+    [_nameArray addObjectsFromArray:nameTemp];
+    [_localArray addObjectsFromArray:localTemp];
+    
+    self.isShacken = NO;
 }
 
 #pragma mark - viberation feedback
@@ -121,13 +135,36 @@
          
          NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
          UIImage *image = [[UIImage alloc] initWithData:imageData];
-// Save image to sandbox
+
+//---------------------Get the Current Time as Uique Name---------------------------------------------
+         NSDate *date = [NSDate date];
+         NSCalendar *calendar = [NSCalendar currentCalendar];
+         NSDateComponents *comps;
+         comps = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
+         
+         NSInteger hour = [comps hour];
+         NSInteger min = [comps minute];
+         NSInteger sec = [comps second];
+         
+         NSString *uiqueName = [NSString stringWithFormat:@"%ld%ld%ld", (long)hour, (long)min, (long)sec];
+         NSLog(@"uique: %@", uiqueName);
+         [_nameArray addObject:uiqueName];
+         NSLog(@"%@", _nameArray);
+//---------------------Get the Current Time as Uique Name---------------------------------------------
+         
+         
+         
+         
+//-------------------------- Save image to sandbox --------------------------------------------------
          NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-         NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"pic_test.png"]];   // 保存文件的名称
-         [UIImagePNGRepresentation(image)writeToFile: filePath  atomically:YES];
+         NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", uiqueName]];
+         [UIImagePNGRepresentation(image)writeToFile:filePath atomically:YES];
          
+         NSString *newName = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"myData.plist"];
+         [_nameArray writeToFile:newName atomically:YES];
          
-         
+//-------------------------- Save image to sandbox --------------------------------------------------
+
          
          
 // get image from live preview
@@ -136,17 +173,36 @@
 
 }
 
+
+//static int i = 0;
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     //此处locations存储了持续更新的位置坐标值，取最后一个值为最新位置，如果不想让其持续更新位置，则在此方法中获取到一个值之后让locationManager stopUpdatingLocation
-    CLLocation *currentLocation = [locations lastObject];
+    if (self.isShacken == NO) {
+        CLLocation *currentLocation = [locations lastObject];
+        
+        CLLocationCoordinate2D coor = currentLocation.coordinate;
+        NSLog(@"%f", coor.latitude);
+        NSLog(@"%f", coor.longitude);
+        
+        NSString *localStr = [NSString stringWithFormat:@"(%f,%f)", coor.longitude, coor.latitude];
+//        NSString *localStr = [NSString stringWithFormat:@"0101"];
+//        i++;
+
+        
+        [_localArray addObject:localStr];
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+        NSString *localPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"localData.plist"];
+        [_localArray writeToFile:localPath atomically:YES];
+        
+        
+        self.latLabel.text = [NSString stringWithFormat:@"%.3f", coor.latitude];
+        self.lonLabel.text = [NSString stringWithFormat:@"%.3f", coor.longitude];
+        self.isShacken = YES;
+        [self performSelector:@selector(changeBool) withObject:self afterDelay:0.1];
+    }
     
-    CLLocationCoordinate2D coor = currentLocation.coordinate;
-    NSLog(@"%f", coor.latitude);
-    NSLog(@"%f", coor.longitude);
-    
-    self.latLabel.text = [NSString stringWithFormat:@"%.3f", coor.latitude];
-    self.lonLabel.text = [NSString stringWithFormat:@"%.3f", coor.longitude];
     
     
     //[self.locationManager stopUpdatingLocation];
@@ -156,6 +212,10 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"error:%@",error);
+}
+
+- (void)changeBool{
+    self.isShacken = NO;
 }
 
 @end

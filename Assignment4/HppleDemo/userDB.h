@@ -13,4 +13,5 @@
 
 - (void)creatDataBase;
 - (void)inserToDataBase: (NSString *)str;
+- (NSMutableArray *)loadArrayFromDataBase;
 @end
